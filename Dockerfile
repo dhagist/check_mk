@@ -27,17 +27,24 @@ RUN apt-get update && apt-get install -y \
     php5-cgi \
     php5-cli \
     php5-gd \
-	php5-mcrypt \
-	php5-sqlite \
-	php-pear \
-	rsync \
-	smbclient \
-	rpcbind \
-	lcab \
-	snmp \
-	unzip \
-	xinetd
-   
+    php5-mcrypt \
+    php5-sqlite \
+    php-pear \
+    rsync \
+    smbclient \
+    rpcbind \
+    lcab \
+    snmp \
+    unzip \
+    xinetd \
+    libfreeradius-client2 \
+    libpcap0.8 \
+    libgsf-1-114 \
+    poppler-utils 
+    
 EXPOSE 22/tcp
+RUN mkdir /opt/omd
+VOLUME /opt/omd
+
 RUN wget -O /tmp/check-mk-raw-1.4.0p22.deb https://mathias-kettner.de/support/1.4.0p22/check-mk-raw-1.4.0p22_0.jessie_amd64.deb
 RUN dpkg -i /tmp/check-mk-raw-1.4.0p22.deb
