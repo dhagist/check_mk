@@ -1,5 +1,7 @@
-# Dockerfile
+#Download base image ubuntu 16.04
 FROM ubuntu:16.04
-
-RUN sudo apt-get update && sudo apt-get upgrade -y
-
+ 
+# Update Software repository
+RUN apt-get update
+ 
+RUN apt-get upgrade -y
