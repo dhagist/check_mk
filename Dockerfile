@@ -51,8 +51,8 @@ EXPOSE 22/tcp
 RUN mkdir /opt/omd
 VOLUME /opt/omd
 
-RUN a2enmod rewrite
-RUN /etc/init.d/apache2 restart
+#RUN a2enmod rewrite
+#RUN /etc/init.d/apache2 restart
 
-RUN wget -O /tmp/check-mk-raw-1.4.0p22.deb https://mathias-kettner.de/support/1.4.0p22/check-mk-raw-1.4.0p22_0.jessie_amd64.deb
-RUN dpkg -i /tmp/check-mk-raw-1.4.0p22.deb
+#RUN wget -O /tmp/check-mk-raw-1.4.0p22.deb https://mathias-kettner.de/support/1.4.0p22/check-mk-raw-1.4.0p22_0.jessie_amd64.deb
+#RUN dpkg -i /tmp/check-mk-raw-1.4.0p22.deb
