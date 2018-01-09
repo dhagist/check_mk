@@ -8,6 +8,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update && apt-get install -y \ 
     apt-utils \
+    apache2-utils \
     time \
     traceroute \
     curl \
