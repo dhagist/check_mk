@@ -8,10 +8,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update -o Acquire::http::Proxy="$HTTP_PROXY"  -o Debug::Acquire::http=true && apt-get upgrade -y
 
-RUN apt-get update -o Acquire::http::Proxy="$HTTP_PROXY"  -o Debug::Acquire::http=true && apt-get install -y \ 
-    apt-utils \
-    openssh-server \
-    wget 
+# RUN apt-get update -o Acquire::http::Proxy="$HTTP_PROXY"  -o Debug::Acquire::http=true && apt-get install -y apt-utils openssh-server wget 
     
 EXPOSE 22/tcp
 # ADD bootstrap.sh /opt/
