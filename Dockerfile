@@ -8,3 +8,4 @@ RUN apt-get update && apt-get install -y \
     openssh-server \
     wget
    
+EXPOSE 22/tcp
