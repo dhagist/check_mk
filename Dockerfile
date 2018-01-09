@@ -25,7 +25,18 @@ RUN apt-get update && apt-get install -y \
     rpm \
     php5 \
     php5-cgi \
-    php5-cli 
+    php5-cli \
+    php5-gd \
+	php5-mcrypt \
+	php5-sqlite \
+	php-pear \
+	rsync \
+	smbclient \
+	rpcbind \
+	lcab \
+	snmp \
+	unzip \
+	xinetd
    
 EXPOSE 22/tcp
 RUN wget -q -O /tmp/check-mk-raw-1.4.0p22.deb https://mathias-kettner.de/support/1.4.0p22/check-mk-raw-1.4.0p22_0.jessie_amd64.deb
