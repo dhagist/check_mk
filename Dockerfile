@@ -23,4 +23,4 @@ EXPOSE 22/tcp
 
 RUN wget -O /tmp/check-mk-raw-1.4.0p22.deb https://mathias-kettner.de/support/1.4.0p22/check-mk-raw-1.4.0p22_0.stretch_amd64.deb
 
-ENTRYPOINT ["/opt/bootstrap.sh"]
+# ENTRYPOINT ["/opt/bootstrap.sh"]
