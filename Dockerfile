@@ -49,6 +49,7 @@ RUN apt-get update && apt-get install -y \
     poppler-utils 
     
 EXPOSE 22/tcp
+ADD    bootstrap.sh /opt/
 
 RUN mkdir /opt/omd
 VOLUME /opt/omd
@@ -57,6 +58,6 @@ RUN a2enmod rewrite
 RUN /etc/init.d/apache2 restart
 
 RUN wget -O /tmp/check-mk-raw-1.4.0p22.deb https://mathias-kettner.de/support/1.4.0p22/check-mk-raw-1.4.0p22_0.jessie_amd64.deb
-#RUN dpkg -i /tmp/check-mk-raw-1.4.0p22.deb
 
-ENTRYPOINT ["/bin/bash"]
+
+ENTRYPOINT ["/opt/bootstrap.sh"]
