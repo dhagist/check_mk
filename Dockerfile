@@ -56,6 +56,7 @@ RUN apt-get update && apt-get install -y \
     
 EXPOSE 22/tcp
 ADD bootstrap.sh /opt/
+ADD rc.local /etc/
 RUN chmod +x /opt/bootstrap.sh
 
 RUN mkdir /opt/omd
