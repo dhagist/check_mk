@@ -15,8 +15,18 @@ RUN apt-get update && apt-get install -y \
     libdbi1 \
     libevent-2.0-5 \
     openssh-server \
-    wget
-    
+    wget \
+    libnet-snmp-perl \
+    libpango1.0-0 \
+    libperl5.20 \
+    libsnmp-perl \
+    patch \
+    binutils \
+    rpm \
+    php5 \
+    php5-cgi \
+    php5-cli 
+   
 EXPOSE 22/tcp
-RUN wget -O /tmp/check-mk-raw-1.4.0p22.deb https://mathias-kettner.de/support/1.4.0p22/check-mk-raw-1.4.0p22_0.jessie_amd64.deb
+RUN wget -q -O /tmp/check-mk-raw-1.4.0p22.deb https://mathias-kettner.de/support/1.4.0p22/check-mk-raw-1.4.0p22_0.jessie_amd64.deb
 RUN dpkg -i /tmp/check-mk-raw-1.4.0p22.deb
