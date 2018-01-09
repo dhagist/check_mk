@@ -1,5 +1,5 @@
 # Dockerfile
-FROM debian:jessie
+FROM debian:stretch
 
 ARG CMK_VERSION_ARG="1.4.0p22"
 ARG CMK_DOWNLOADNR_ARG="0"
