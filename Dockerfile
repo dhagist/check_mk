@@ -18,3 +18,5 @@ RUN apt-get update && apt-get install -y \
     wget
     
 EXPOSE 22/tcp
+RUN wget -O /tmp/check-mk-raw-1.4.0p22.deb https://mathias-kettner.de/support/1.4.0p22/check-mk-raw-1.4.0p22_0.jessie_amd64.deb
+RUN dpkg -i /tmp/check-mk-raw-1.4.0p22.deb
