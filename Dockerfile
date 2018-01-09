@@ -6,9 +6,9 @@ ARG CMK_DOWNLOADNR_ARG="0"
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-get update && apt-get upgrade -y
+RUN apt-get update -o Acquire::http::Proxy="$HTTP_PROXY"  -o Debug::Acquire::http=true && apt-get upgrade -y
 
-RUN apt-get update && apt-get install -y \ 
+RUN apt-get update -o Acquire::http::Proxy="$HTTP_PROXY"  -o Debug::Acquire::http=true && apt-get install -y \ 
     apt-utils \
     openssh-server \
     wget 
