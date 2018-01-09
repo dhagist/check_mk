@@ -56,3 +56,5 @@ VOLUME /opt/omd
 
 #RUN wget -O /tmp/check-mk-raw-1.4.0p22.deb https://mathias-kettner.de/support/1.4.0p22/check-mk-raw-1.4.0p22_0.jessie_amd64.deb
 #RUN dpkg -i /tmp/check-mk-raw-1.4.0p22.deb
+
+ENTRYPOINT ["/bin/bash"]
