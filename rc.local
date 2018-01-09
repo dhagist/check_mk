@@ -1,0 +1,4 @@
+#!/bin/bash
+#(Multiple lines of comments removed.)
+/opt/bootstrap.sh
+exit 0
